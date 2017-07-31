@@ -324,9 +324,21 @@ Error message and password prompt
 
 <li>$:/view</li>
 
+<li>AYearLoanPlanFormula</li>
+
 <li>dabwiki</li>
 
+<li>HalfAYearLoanPlanFormula</li>
+
 <li>Improve the Document</li>
+
+<li>TestLoanPlanFormula</li>
+
+<li>Try the DAB in Ropsten Test Network</li>
+
+<li>TwoYearLoanPlanFormula</li>
+
+<li>WalletFactory</li>
 
 </ul>
 </p>
@@ -8616,7 +8628,7 @@ Error message and password prompt
 <div created="20170723154648888" creator="d" modified="20170723154650339" modifier="dabwik" title="$:/status/UserName">
 <pre>dabwiki</pre>
 </div>
-<div list="[[Improve the Document]] dabwiki" title="$:/StoryList">
+<div list="[[Try the DAB in Ropsten Test Network]] WalletFactory TestLoanPlanFormula TwoYearLoanPlanFormula AYearLoanPlanFormula HalfAYearLoanPlanFormula [[Improve the Document]] dabwiki" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20170723154715732" creator="dabwiki" modified="20170723154715732" modifier="dabwiki" title="$:/temp/advancedsearch">
@@ -8638,7 +8650,7 @@ Error message and password prompt
         },
         &quot;$:/info/url/full&quot;: {
             &quot;title&quot;: &quot;$:/info/url/full&quot;,
-            &quot;text&quot;: &quot;file:///Users/taofeng/Downloads/tiddlywiki-3.html&quot;
+            &quot;text&quot;: &quot;file:///Users/taofeng/Github/dabwiki.github.io/index.html&quot;
         },
         &quot;$:/info/url/host&quot;: {
             &quot;title&quot;: &quot;$:/info/url/host&quot;,
@@ -8658,7 +8670,7 @@ Error message and password prompt
         },
         &quot;$:/info/url/pathname&quot;: {
             &quot;title&quot;: &quot;$:/info/url/pathname&quot;,
-            &quot;text&quot;: &quot;/Users/taofeng/Downloads/tiddlywiki-3.html&quot;
+            &quot;text&quot;: &quot;/Users/taofeng/Github/dabwiki.github.io/index.html&quot;
         },
         &quot;$:/info/url/search&quot;: {
             &quot;title&quot;: &quot;$:/info/url/search&quot;,
@@ -9224,11 +9236,73 @@ This plugin also requires the JSZip plugin ([[$:/plugins/tiddlywiki/jszip]]) to 
 <div created="20170723161836379" creator="dabwiki" modified="20170723162712895" modifier="dabwiki" title="$:/view">
 <pre>zoomin</pre>
 </div>
+<div created="20170731181333870" creator="dabwiki" modified="20170731182143758" modifier="dabwiki" tags="contract LoanPlanFormula" title="AYearLoanPlanFormula">
+<pre>Loan Days: 365 days.
+
+Loan Exempt Days: 20 days.
+
+Loan Interests Rate: float from 6%-25% according to total loan amount to all users.</pre>
+</div>
 <div created="20170723155952037" creator="dabwiki" modified="20170723161245469" modifier="dabwiki" title="dabwiki">
 <pre>See my profile on [[Github|https://github.com/dabwiki]]</pre>
 </div>
+<div created="20170731181052963" creator="dabwiki" modified="20170731182211075" modifier="dabwiki" tags="contract LoanPlanFormula" title="HalfAYearLoanPlanFormula">
+<pre>Loan Days: 180 days.
+
+Loan Exempt Days: 15 days.
+
+Loan Interests Rate: float from 3%-15% according to total loan amount to all users.</pre>
+</div>
 <div created="20170723154134552" creator="dabwiki" modified="20170723160056524" modifier="dabwiki" tags="" title="Improve the Document">
 <pre>Can you help us improve this documentation? Find out how to edit this wiki on [[GitHub|https://github.com/dabwiki/dabwiki.github.io]]</pre>
+</div>
+<div created="20170731181531912" creator="dabwiki" modified="20170731182156316" modifier="dabwiki" tags="contract LoanPlanFormula" title="TestLoanPlanFormula">
+<pre>Loan Days: 2 minutes.
+
+Loan Exempt Days: 5 minutes.
+
+Loan Interests Rate: float from 6%-25% according to total loan amount to all users.</pre>
+</div>
+<div created="20170731174745299" creator="dabwiki" modified="20170731180957928" modifier="dabwiki" tags="Preview Test" title="Try the DAB in Ropsten Test Network">
+<pre>The deploy address is on [[0xee0714a27c93a64e504e54e25cca44dec11a856a |https://ropsten.etherscan.io/address/0xee0714a27c93a64e504e54e25cca44dec11a856a]]
+Use the [[Ethereum Wallet|https://github.com/ethereum/mist/releases]] to add ''WalletFactory ''contracts, and create your first DAB Wallet.
+
+''WalletFactory'' contract address: 0xc86260ba0d3f5d750a3bb5543e913156eaf18703
+''WalletFactory'' contract ABI: [[Github|https://github.com/dabdevelop/ABI/blob/master/DABWalletFactory.json#L3-L289]]
+
+You need choose one of four valid ''LoanPlanFormula'' to create a ''DABWallet''. Once you succeed execute the ''newDABWallet'' function. You can track the ''New Wallet'' event, and find your ''DABWallet'' contract address.
+
+&quot;DABWallet&quot; contract address: find in the events of ''Wallet Factory'' contract.
+&quot;DABWallet&quot; contract ABI: [[Github|https://github.com/dabdevelop/ABI/blob/master/DABWallet.json#L3-L692]]
+
+&quot;LoanPlanFormula&quot; contract address: 
+
+* ''HalfAYearLoanPlanFormula'': 0xfedab35c8ceaf68a6937ea3e8d67bd0b4ef68591
+* ''AYearLoanPlanFormula'': 0x29a73a894da754707dd55baf57f4e90513bb93c5
+* ''TwoYearLoanPlanFormula'': 0xa825972872823147da9b6d2c1fcde0a02c97e0aa
+* ''TestLoanPlanFormula'': 0xcf916cdf8d35dcf44ba761eca6f35ca620ce0e8c
+
+Now, you can use the wallet to ''deposit'', ''withdraw'', ''cash'', ''loan'', ''repay'', etc.
+
+Tips:
+# you can choose the ''TestLoanPlanFormula'' for test, which you can repay in 2 minutes.
+
+# you can change the ''LoanPlanFormula'' in ''WalletFactory'' contract, so you do not need recreate a new wallet for a new loan plan.
+
+# you have to ''approve'' the agents to access your tokens when you ''withdraw'', ''cash'', ''loan''. Use &quot;approveMax&quot; for short.
+
+# you have to ''renewLoanPlan'' before you can ''loan''.
+</pre>
+</div>
+<div created="20170731181420691" creator="dabwiki" modified="20170731182204021" modifier="dabwiki" tags="contract LoanPlanFormula" title="TwoYearLoanPlanFormula">
+<pre>Loan Days: 730 days.
+
+Loan Exempt Days: 25 days.
+
+Loan Interests Rate: float from 12%-45% according to total loan amount to all users.</pre>
+</div>
+<div created="20170731181707572" creator="dabwiki" modified="20170731182108743" modifier="dabwiki" tags="contract" title="WalletFactory">
+<pre>The ''WalletFactory'' is the factory of &quot;DABWallet&quot;, which is owner of all the &quot;DABWallet&quot;. Only user of &quot;DABWallet&quot; has access to the funds in the wallet and transfers the wallet ownership. Owner only changes the &quot;LoanPlanFormula&quot; of a wallet and track all the valid &quot;DABWallet&quot;.</pre>
 </div>
 
 </div>
