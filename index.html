@@ -8674,19 +8674,19 @@ Error message and password prompt
         },
         &quot;$:/info/url/full&quot;: {
             &quot;title&quot;: &quot;$:/info/url/full&quot;,
-            &quot;text&quot;: &quot;file:///Users/taofeng/Downloads/tiddlywiki%20(1).html&quot;
+            &quot;text&quot;: &quot;http://dab.wiki/&quot;
         },
         &quot;$:/info/url/host&quot;: {
             &quot;title&quot;: &quot;$:/info/url/host&quot;,
-            &quot;text&quot;: &quot;&quot;
+            &quot;text&quot;: &quot;dab.wiki&quot;
         },
         &quot;$:/info/url/hostname&quot;: {
             &quot;title&quot;: &quot;$:/info/url/hostname&quot;,
-            &quot;text&quot;: &quot;&quot;
+            &quot;text&quot;: &quot;dab.wiki&quot;
         },
         &quot;$:/info/url/protocol&quot;: {
             &quot;title&quot;: &quot;$:/info/url/protocol&quot;,
-            &quot;text&quot;: &quot;file:&quot;
+            &quot;text&quot;: &quot;http:&quot;
         },
         &quot;$:/info/url/port&quot;: {
             &quot;title&quot;: &quot;$:/info/url/port&quot;,
@@ -8694,7 +8694,7 @@ Error message and password prompt
         },
         &quot;$:/info/url/pathname&quot;: {
             &quot;title&quot;: &quot;$:/info/url/pathname&quot;,
-            &quot;text&quot;: &quot;/Users/taofeng/Downloads/tiddlywiki%20(1).html&quot;
+            &quot;text&quot;: &quot;/&quot;
         },
         &quot;$:/info/url/search&quot;: {
             &quot;title&quot;: &quot;$:/info/url/search&quot;,
@@ -8702,7 +8702,7 @@ Error message and password prompt
         },
         &quot;$:/info/url/origin&quot;: {
             &quot;title&quot;: &quot;$:/info/url/origin&quot;,
-            &quot;text&quot;: &quot;file://&quot;
+            &quot;text&quot;: &quot;http://dab.wiki&quot;
         }
     }
 }</pre>
@@ -9318,7 +9318,7 @@ Loan Exempt Days: 5 minutes.
 
 Loan Interests Rate: float from 6%-25% according to total loan amount to all users.</pre>
 </div>
-<div created="20170731174745299" creator="dabwiki" modified="20170731183807914" modifier="dabwiki" tags="Preview Test" title="Try the DAB in Ropsten Test Network">
+<div created="20170731174745299" creator="dabwiki" modified="20170801002001009" modifier="dabwiki" tags="Preview Test" title="Try the DAB in Ropsten Test Network">
 <pre>The deploy address is on [[0xee0714a27c93a64e504e54e25cca44dec11a856a |https://ropsten.etherscan.io/address/0xee0714a27c93a64e504e54e25cca44dec11a856a]]
 Use the [[Ethereum Wallet|https://github.com/ethereum/mist/releases]] to add ''WalletFactory ''contracts, and create your first DAB Wallet.
 
@@ -9335,9 +9335,17 @@ Use the [[Ethereum Wallet|https://github.com/ethereum/mist/releases]] to add ''W
 You need choose one of four valid ''LoanPlanFormula'' to create a ''DABWallet''. Once you succeed execute the ''newDABWallet'' function. You can track the ''New Wallet'' event, and find your ''DABWallet'' contract address.
 
 &quot;DABWallet&quot; contract address: find in the events of ''Wallet Factory'' contract.
-&quot;DABWallet&quot; contract ABI: [[Github|https://github.com/dabdevelop/ABI/blob/master/DABWallet.json#L3-L692]]
+&quot;DABWallet&quot; contract ABI: [[Github|https://github.com/dabdevelop/ABI/blob/master/DABWallet.json#L3-L730]]
 
 Now, you can use the wallet to ''deposit'', ''withdraw'', ''cash'', ''loan'', ''repay'', etc.
+
+Watch the &quot;Token&quot; on there addresses: 
+
+* ''DepositToken'': 0x3061cce31ab5b61b1ebfd983b1d0d3546af7c9c8
+* ''CreditToken'': 0xc5c42c39a0afa65497a622eb319f8c6d9ce7aef8
+* ''SubCreditToken'': 0xca357b54af883c47202ed173ee6f06a88e33c76e
+* ''DiscreditToken'': 0xf1014a22b6489ef942d63003e00b8d6f86742750
+
 
 Tips:
 
