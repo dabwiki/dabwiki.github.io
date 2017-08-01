@@ -13079,11 +13079,13 @@ Loan Exempt Days: 5 minutes.
 
 Loan Interests Rate: float from 6%-25% according to total loan amount to all users.</pre>
 </div>
-<div created="20170731174745299" creator="dabwiki" modified="20170801002441639" modifier="dabwiki" tags="Preview Test" title="Try the DAB in Ropsten Test Network">
+<div created="20170731174745299" creator="dabwiki" modified="20170801004139845" modifier="dabwiki" tags="Preview Test" title="Try the DAB in Ropsten Test Network">
 <pre>The deploy address is on [[0xee0714a27c93a64e504e54e25cca44dec11a856a |https://ropsten.etherscan.io/address/0xee0714a27c93a64e504e54e25cca44dec11a856a]]
-Use the [[Ethereum Wallet|https://github.com/ethereum/mist/releases]] to add ''WalletFactory ''contracts, and create your first DAB Wallet.
+
+Use the [[Ethereum Wallet|https://github.com/ethereum/mist/releases]] to add ''WalletFactory ''contracts, and create your first ''DABWallet''.
 
 ''WalletFactory'' contract address: 0xc86260ba0d3f5d750a3bb5543e913156eaf18703
+
 ''WalletFactory'' contract ABI: [[Github|https://github.com/dabdevelop/ABI/blob/master/DABWalletFactory.json#L3-L289]]
 
 &quot;LoanPlanFormula&quot; contract address: 
@@ -13095,12 +13097,13 @@ Use the [[Ethereum Wallet|https://github.com/ethereum/mist/releases]] to add ''W
 
 You need choose one of four valid ''LoanPlanFormula'' to create a ''DABWallet''. Once you succeed execute the ''newDABWallet'' function. You can track the ''New Wallet'' event, and find your ''DABWallet'' contract address.
 
-&quot;DABWallet&quot; contract address: find in the events of ''Wallet Factory'' contract.
-&quot;DABWallet&quot; contract ABI: [[Github|https://github.com/dabdevelop/ABI/blob/master/DABWallet.json#L3-L730]]
+''DABWallet'' contract address: find in the events of ''Wallet Factory'' contract.
+
+''DABWallet'' contract ABI: [[Github|https://github.com/dabdevelop/ABI/blob/master/DABWallet.json#L3-L730]]
 
 Now, you can use the wallet to ''deposit'', ''withdraw'', ''cash'', ''loan'', ''repay'', etc.
 
-Watch the &quot;Token&quot; on there addresses: 
+Watch the ''Token'' on there addresses: 
 
 * ''DepositToken'': 0x3061cce31ab5b61b1ebfd983b1d0d3546af7c9c8
 * ''CreditToken'': 0xc5c42c39a0afa65497a622eb319f8c6d9ce7aef8
@@ -13114,11 +13117,11 @@ Tips:
 
 # ''depositETH'' and ''deposit'' of ''DABWallet'' is quite different. The former only transfers your ETH to the wallet while the latter transfer the ETH to the ''DAB'' to get ''DepositToken''. If you are in ''ActivationStage'', You may get ''CreditToken'' in the mean time.
 
-# you can change the ''LoanPlanFormula'' in ''WalletFactory'' contract, so you do not need to recreate a new wallet for a new loan plan.
+# You can change the ''LoanPlanFormula'' in ''WalletFactory'' contract, so you do not need to recreate a new wallet for a new loan plan.
 
-# you have to ''approve'' the agents to access your tokens when you ''withdraw'', ''cash'', ''loan''. Use &quot;approveMax&quot; for short.
+# You have to ''approve'' the agents to access your tokens when you ''withdraw'', ''cash'', ''loan''. Use &quot;approveMax&quot; for short.
 
-# you have to ''renewLoanPlan'' before you can ''loan''.
+# You have to ''renewLoanPlan'' before you can ''loan''.
 </pre>
 </div>
 <div created="20170731181420691" creator="dabwiki" modified="20170731182204021" modifier="dabwiki" tags="contract LoanPlanFormula" title="TwoYearLoanPlanFormula">
