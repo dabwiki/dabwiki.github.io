@@ -374,7 +374,7 @@ Error message and password prompt
 
 <li>LoanPlanFormula</li>
 
-<li>PriceDownCurve</li>
+<li>PriceFloorCurve</li>
 
 <li>TestLoanPlanFormula</li>
 
@@ -12393,8 +12393,8 @@ Error message and password prompt
 <div created="20170723161624154" creator="dabwiki" modified="20170802151648358" modifier="dabwiki" title="$:/state/tab/moresidebar-401116514">
 <pre>$:/core/ui/MoreSideBar/All</pre>
 </div>
-<div created="20170723153938892" creator="dabwiki" modified="20170802154602222" modifier="dabwiki" title="$:/state/tab/sidebar--1835078512">
-<pre>$:/core/ui/SideBar/Open</pre>
+<div created="20170723153938892" creator="dabwiki" modified="20170806154556824" modifier="dabwiki" title="$:/state/tab/sidebar--1835078512">
+<pre>$:/core/ui/SideBar/Recent</pre>
 </div>
 <div created="20170723162556157" creator="dabwiki" modified="20170723162835940" modifier="dabwiki" title="$:/state/tabs/controlpanel/toolbars-1345989671">
 <pre>$:/core/ui/ControlPanel/Toolbars/ViewToolbar</pre>
@@ -12402,7 +12402,7 @@ Error message and password prompt
 <div created="20170723154648888" creator="d" modified="20170723154650339" modifier="dabwik" title="$:/status/UserName">
 <pre>dabwiki</pre>
 </div>
-<div list="[[Try the DAB in Ropsten Test Network]] ActivationStage ExpantionStage" title="$:/StoryList">
+<div list="PriceFloorCurve [[Try the DAB in Ropsten Test Network]] ActivationStage ExpantionStage" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20170723154715732" creator="dabwiki" modified="20170723154715732" modifier="dabwiki" title="$:/temp/advancedsearch">
@@ -12424,19 +12424,19 @@ Error message and password prompt
         },
         &quot;$:/info/url/full&quot;: {
             &quot;title&quot;: &quot;$:/info/url/full&quot;,
-            &quot;text&quot;: &quot;file:///Users/taofeng/Github/dabwiki.github.io/index.html&quot;
+            &quot;text&quot;: &quot;https://dab.wiki/&quot;
         },
         &quot;$:/info/url/host&quot;: {
             &quot;title&quot;: &quot;$:/info/url/host&quot;,
-            &quot;text&quot;: &quot;&quot;
+            &quot;text&quot;: &quot;dab.wiki&quot;
         },
         &quot;$:/info/url/hostname&quot;: {
             &quot;title&quot;: &quot;$:/info/url/hostname&quot;,
-            &quot;text&quot;: &quot;&quot;
+            &quot;text&quot;: &quot;dab.wiki&quot;
         },
         &quot;$:/info/url/protocol&quot;: {
             &quot;title&quot;: &quot;$:/info/url/protocol&quot;,
-            &quot;text&quot;: &quot;file:&quot;
+            &quot;text&quot;: &quot;https:&quot;
         },
         &quot;$:/info/url/port&quot;: {
             &quot;title&quot;: &quot;$:/info/url/port&quot;,
@@ -12444,7 +12444,7 @@ Error message and password prompt
         },
         &quot;$:/info/url/pathname&quot;: {
             &quot;title&quot;: &quot;$:/info/url/pathname&quot;,
-            &quot;text&quot;: &quot;/Users/taofeng/Github/dabwiki.github.io/index.html&quot;
+            &quot;text&quot;: &quot;/&quot;
         },
         &quot;$:/info/url/search&quot;: {
             &quot;title&quot;: &quot;$:/info/url/search&quot;,
@@ -12452,7 +12452,7 @@ Error message and password prompt
         },
         &quot;$:/info/url/origin&quot;: {
             &quot;title&quot;: &quot;$:/info/url/origin&quot;,
-            &quot;text&quot;: &quot;file://&quot;
+            &quot;text&quot;: &quot;https://dab.wiki&quot;
         }
     }
 }</pre>
@@ -13027,7 +13027,7 @@ This plugin also requires the JSZip plugin ([[$:/plugins/tiddlywiki/jszip]]) to 
 <div created="20170723161836379" creator="dabwiki" modified="20170801002252580" modifier="dabwiki" title="$:/view">
 <pre>classic</pre>
 </div>
-<div created="20170731183625626" creator="dabwiki" modified="20170802154522832" modifier="dabwiki" title="ActivationStage" type="text/vnd.tiddlywiki">
+<div created="20170731183625626" creator="dabwiki" modified="20170806154637016" modifier="dabwiki" title="ActivationStage" type="text/vnd.tiddlywiki">
 <pre>The ''DAB'' is more robust if the more funds it raises in the activation stage. There are bonus for earlier founders who deposit their funds. The ''DepositToken'' price goes up with the increase of funds the ''DAB'' raises. The graph shows the price curve.
 
 [img[https://dab.wiki/imgs/Activation.jpg]]
@@ -13048,7 +13048,7 @@ If the ''DAB'' keeps growing, it will get into next stage: ''ExpantionStage''.
 
 The DPT's price is growing as the invests awards from ''DepositAgent''. In this case, there are incentives to hold DPT not only from the value of ''DepositReserve'' but also the interests awards from ''CreditAgent''.
 
-The incentives will make the price of DPT stick to the DPT Price Curve. The ''PriceDownCurve'' also restrains the price to fall. 
+The incentives will make the price of DPT stick to the DPT Price Curve. The ''PriceFloorCurve'' also restrains the price to fall. 
 </pre>
 </div>
 <div created="20170731181333870" creator="dabwiki" modified="20170801014240139" modifier="dabwiki" tags="contract LoanPlanFormula" title="AYearLoanPlanFormula" type="text/vnd.tiddlywiki">
@@ -13132,8 +13132,8 @@ Loan Interests Rate: float from 3%-15% according to total loan amount to all use
 <div created="20170731183241148" creator="dabwiki" modified="20170802115441878" modifier="dabwiki" tags="LoanPlanFormula" title="LoanPlanFormula" type="text/vnd.tiddlywiki">
 <pre>The united name of different ''LoanPlanFormula'', which provides different loan plan. A loan plan contain the `loanDays`, which means how long to loan; the `exemptDays`, which means the length of period to repay; the `interestRate`.</pre>
 </div>
-<div created="20170802135720431" creator="dabwiki" modified="20170802154559786" modifier="dabwiki" tags="Math" title="PriceDownCurve">
-<pre>The graph shows the ''PriceDownCurve'' of ''DepositToken''.
+<div created="20170802135720431" creator="dabwiki" modified="20170806155821918" modifier="dabwiki" tags="Math" title="PriceFloorCurve">
+<pre>The graph shows the ''PriceFloorCurve'' of ''DepositToken''.
 
 [img[https://dab.wiki/imgs/DownCurve.jpg]]
 
